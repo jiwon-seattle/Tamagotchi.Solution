@@ -51,12 +51,15 @@ namespace Tamagotchi.Models
       return _life;
     }
 
-    public void PassTime()
+    public static void PassTime()
     {
-      Food -= 1;
-      Hapiness -= 1;
-      Sleep -= 1;
-      SetLife();
+      foreach (Tamagotchi tamagotchi in _instances)
+      {
+        tamagotchi.Food -= 1;
+        tamagotchi.Hapiness -= 1;
+        tamagotchi.Sleep -= 1;
+        SetLife();
+      }
     }
   }
 }
