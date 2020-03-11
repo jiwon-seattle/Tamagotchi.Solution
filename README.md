@@ -1,4 +1,4 @@
-# Tamagotchi C
+# Tamagotchi C Sharp
 
 ![LastCommit](https://img.shields.io/github/last-commit/seschwartz8/Tamagotchi.Solution)
 ![Languages](https://img.shields.io/github/languages/top/seschwartz8/Tamagotchi.Solution)

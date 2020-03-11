@@ -1,6 +1,7 @@
 @{
   Layout = "_Layout";
 }
+
 @using TamagotchiGame.Models
 <div class="container">
   <h1>Your Tamagotchis!</h1>
@@ -14,6 +15,7 @@
       if (tamagotchi.GetLife())
       {
         <li>
+            <img src="~/img/">
             <a href="/tamagotchis/@tamagotchi.Id">@tamagotchi.Name, @tamagotchi.Food, @tamagotchi.Sleep, @tamagotchi.Happiness</a>
         </li>
       }
