@@ -1,10 +1,10 @@
-# TITLE OF PROJECT
+# Tamagotchi C
 
 ![LastCommit](https://img.shields.io/github/last-commit/seschwartz8/Tamagotchi.Solution)
 ![Languages](https://img.shields.io/github/languages/top/seschwartz8/Tamagotchi.Solution)
 ![MIT license](https://img.shields.io/badge/License-MIT-orange.svg)
 
-#### Short description, Current Version: 02.20.2020
+#### A C#/.NET Core MVC website where you can play with your Tamagotchi, Current Version: 02.20.2020
 
 #### By Sarah "Sasa" Schwartz
 
@@ -23,7 +23,7 @@
 
 ## Description
 
-FULL DESCRIPTION HERE
+A C#/.NET Core MVC website where you can play with your Tamagotchi. You can name your Tamagotchi, feed it, play with it, put it to sleep, etc. As time passes, your Tamagotchi's stats will lower if you don't take good care of it.
 
 ## Installation Requirements
 
@@ -37,12 +37,21 @@ FULL DESCRIPTION HERE
 
 ## Specs
 
-- User will do a thing and get a result.
-  - Sample input:
-  - Expected output:
-- User will do a thing and get a result.
-  - Sample input:
-  - Expected output:
+- User can create a Tamagotchi with custom name.
+  - Sample input: User inputs Tamagotchi name of "cutiepie"
+  - Expected output: Tamagotchi with name "cutiepie" appears on screen.
+- User can feed Tamagotchi
+  - Sample input: User clicks "feed" button
+  - Expected output: Tamagotchi's food number increases
+- User can play with Tamagotchi
+  - Sample input: User clicks "play" button
+  - Expected output: Tamagotchi's happiness number increases
+- User can play with Tamagotchi
+  - Sample input: User clicks "nap" button
+  - Expected output: Tamagotchi's sleep number increases
+- User can pass the time
+  - Sample input: User clicks "pass time" button
+  - Expected output: All of Tamagotchi's stats decrease
 
 ## Known Bugs
 

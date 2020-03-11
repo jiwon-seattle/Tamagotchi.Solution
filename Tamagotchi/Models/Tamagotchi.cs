@@ -1,13 +1,13 @@
 using System;
 
-namespace ProjectName.Models
+namespace Tamagotchi.Models
 {
-  public class ClassName
+  public class Tamagotchi
   {
     public string Name { get; set; }
     public string City { get; set; }
 
-    public ClassName(string name)
+    public Tamagotchi(string name)
     {
       Name = name;
       City = "Seattle";
