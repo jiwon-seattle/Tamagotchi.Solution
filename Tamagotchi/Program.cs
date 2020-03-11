@@ -1,7 +1,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace ProjectName.Models
+namespace Tamagotchi.Models
 {
   public class Program
   {
