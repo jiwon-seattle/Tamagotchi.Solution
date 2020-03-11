@@ -6,7 +6,13 @@
 
 #### A C#/.NET Core MVC website where you can play with your Tamagotchi, Current Version: 02.20.2020
 
-#### By Sarah "Sasa" Schwartz
+#### By Sarah "Sasa" Schwartz, Jiwon Han
+
+### Description of What We Did On 3/11/20
+
+- Worked on Places Where We've Been
+- Worked on Tamagotchi
+- Start advanced reading for homework
 
 ---
 
