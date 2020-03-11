@@ -6,6 +6,12 @@ namespace TamagotchiGame.Controllers
 {
   public class TamagotchisController : Controller
   {
+    [HttpGet("/tamagotchis")]
+    public ActionResult Index()
+    {
+      return View(Tamagotchi.GetAll());
+    }
+
     [HttpGet("/tamagotchis/new")]
     public ActionResult New()
     {
@@ -39,6 +45,14 @@ namespace TamagotchiGame.Controllers
     public ActionResult Decrease()
     {
       Tamagotchi.PassTime();
+      List<Tamagotchi> allTamagotchis = Tamagotchi.GetAll();
+      return View("Index", allTamagotchis);
+    }
+
+    [HttpPost("tamagotchis/deleteAll")]
+    public ActionResult DeleteAll()
+    {
+      Tamagotchi.ClearAll();
       List<Tamagotchi> allTamagotchis = Tamagotchi.GetAll();
       return View("Index", allTamagotchis);
     }
