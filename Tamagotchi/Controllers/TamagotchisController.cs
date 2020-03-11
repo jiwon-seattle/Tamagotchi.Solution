@@ -65,7 +65,7 @@ namespace TamagotchiGame.Controllers
       return View("Index", allTamagotchis);
     }
 
-    [HttpPost("tamagotchis/deleteAll")]
+    [HttpGet("tamagotchis/deleteAll")]
     public ActionResult DeleteAll()
     {
       Tamagotchi.ClearAll();
