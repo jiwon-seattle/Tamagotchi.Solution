@@ -6,19 +6,22 @@
 
 <div class="container">
   <h1>Your Tamagotchis!</h1>
-  <ul>
+
+  <div class="tamagotchi-container">
     @if (Model.Count == 0)
     {
-      <li>You have no Tamagotchis</li>
+      <p>You have no Tamagotchis</p>
     }
     @foreach (Tamagotchi tamagotchi in Model)
     {
       if (tamagotchi.GetLife())
       {
-        <li>
-            <img src="~/img/">
-            <a href="/tamagotchis/@tamagotchi.Id">@tamagotchi.Name, @tamagotchi.Food, @tamagotchi.Sleep, @tamagotchi.Happiness</a>
-        </li>
+        <div>
+            <a href="/tamagotchis/@tamagotchi.Id">
+              <img src="~/img/eachTamagotchi.gif">
+              @tamagotchi.Name, @tamagotchi.Food, @tamagotchi.Sleep, @tamagotchi.Happiness
+            </a>
+        </div>
       }
     }
 
@@ -27,18 +30,23 @@
       if(@tamagotchi.GetLife() == false)
       {
         <li>
+          <img src="~/img/gameOver.gif">
           @tamagotchi.Name is dead.
         </li>
       }
     }
-  </ul>
+  </div>
+
+
 
   <form action="/tamagotchis/time" method="post">
-    <button type="submit" name="button">Pass Time</button>
+    <button class="btn" type="submit" name="button">Pass Time</button>
   </form>
 
-  <a href="/tamagotchis/new">Add A Tamagotchi</a>
-  <a href="/tamagotchis/deleteAll">Delete All Tamagotchis</a>
+  <div class="footer">
+    <a href="/tamagotchis/new">Add A Tamagotchi</a>
+    <a href="/tamagotchis/deleteAll">Delete All Tamagotchis</a>
+  </div>
 </div>
 
 

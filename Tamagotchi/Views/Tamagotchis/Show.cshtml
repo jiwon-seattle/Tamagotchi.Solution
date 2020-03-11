@@ -6,20 +6,26 @@
 
 <div class="container">
   <h1>@Model.Name</h1>
-  <h2>Food: @Model.Food</h2>
-  <h2>Sleep: @Model.Sleep</h2>
-  <h2>Happiness: @Model.Happiness</h2>
-  <form action="/tamagotchis/@Model.Id/feed" method="post">
-    <button type="submit" name="button" value="@Model.Id">Feed</button>
-  </form>
+  <div class="stats">
+    <h2>Food: @Model.Food</h2>
+    <h2>Sleep: @Model.Sleep</h2>
+    <h2>Happiness: @Model.Happiness</h2>
+  </div>
 
-  <form action="/tamagotchis/@Model.Id/play" method="post">
-    <button type="submit" name="button">Play</button>
-  </form>
+  <div class="footer">
+    <form action="/tamagotchis/@Model.Id/feed" method="post">
+      <button class="btn" type="submit" name="button" value="@Model.Id">Feed</button>
+    </form>
+    
+    <form action="/tamagotchis/@Model.Id/play" method="post">
+      <button class="btn" type="submit" name="button">Play</button>
+    </form>
 
-  <form action="/tamagotchis/@Model.Id/sleep" method="post">
-    <button type="submit" name="button">Sleep</button>
-  </form>
+    <form action="/tamagotchis/@Model.Id/sleep" method="post">
+      <button class="btn" type="submit" name="button">Sleep</button>
+    </form>
+  </div>
+
 
   <a href="/tamagotchis">View All Tamagotchis</a>
 </div>

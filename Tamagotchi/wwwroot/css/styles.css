@@ -1,4 +1,8 @@
 * {
+  font-size: 1.1em;
+}
+
+body {
   background-color: pink;
 }
 
@@ -7,5 +11,48 @@
   flex-direction: column;
   min-height: 60vh;
   align-items: center;
-  border: 1px solid blue;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+img {
+  max-height: 200px;
+}
+
+.btn {
+  background-color: darkslategrey;
+  color: white;
+  margin: 10px;
+}
+
+input {
+  border-radius: 5px;
+}
+
+.tamagotchi-container {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tamagotchi-container div a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  color: black;
+  font-size: 0.9em;
+}
+
+a:hover {
+  text-decoration: none;
+  color: purple;
+}
+
+.footer,
+.stats {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
