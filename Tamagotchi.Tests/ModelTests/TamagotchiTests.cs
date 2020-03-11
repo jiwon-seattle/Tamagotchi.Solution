@@ -22,6 +22,7 @@ namespace Tamagotchi.Tests
       Assert.AreEqual(20, tamagotchi.Food);
       Assert.AreEqual(20, tamagotchi.Happiness);
       Assert.AreEqual(20, tamagotchi.Sleep);
+      Assert.AreEqual(true, tamagotchi.Life);
       Assert.AreEqual(typeof(Tamagotchi), tamagotchi.GetType());
     }
 
