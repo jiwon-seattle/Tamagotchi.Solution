@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Tamagotchi.Models;
+using TamagotchiGame.Models;
 
-namespace Tamagotchi.Tests
+namespace TamagotchiGame.Tests
 {
   [TestClass]
   public class TamagotchiTests : IDisposable
@@ -18,11 +18,11 @@ namespace Tamagotchi.Tests
     {
       string name = "cutiepie";
       Tamagotchi tamagotchi = new Tamagotchi(name);
-      Assert.AreEqual(name, tamagotchi.Name)
+      Assert.AreEqual(name, tamagotchi.Name);
       Assert.AreEqual(20, tamagotchi.Food);
       Assert.AreEqual(20, tamagotchi.Happiness);
       Assert.AreEqual(20, tamagotchi.Sleep);
-      Assert.AreEqual(true, tamagotchi.Life);
+      Assert.AreEqual(true, tamagotchi.GetLife());
       Assert.AreEqual(typeof(Tamagotchi), tamagotchi.GetType());
     }
 
@@ -54,7 +54,7 @@ namespace Tamagotchi.Tests
       Tamagotchi tamagotchi2 = new Tamagotchi("ugly");
       List<Tamagotchi> expected = new List<Tamagotchi> { tamagotchi, tamagotchi2 };
       List<Tamagotchi> result = Tamagotchi.GetAll();
-      Assert.AreEqual(expected, result);
+      CollectionAssert.AreEqual(expected, result);
     }
   }
 }

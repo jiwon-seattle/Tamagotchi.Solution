@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ProjectName.Models
+namespace TamagotchiGame.Models
 {
   public class Startup
   {

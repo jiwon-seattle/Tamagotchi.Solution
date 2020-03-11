@@ -1,16 +1,17 @@
 using System;
+using System.Collections.Generic;
 
-namespace Tamagotchi.Models
+namespace TamagotchiGame.Models
 {
   public class Tamagotchi
   {
     public string Name { get; set; }
-    public string Food { get; set; }
-    public string Sleep { get; set; }
-    public string Happiness { get; set; }
+    public int Food { get; set; }
+    public int Sleep { get; set; }
+    public int Happiness { get; set; }
     private bool _life;
     public static List<Tamagotchi> _instances = new List<Tamagotchi>() { };
-    public int Id { get; };
+    public int Id { get; }
 
     public Tamagotchi(string name)
     {
@@ -56,9 +57,9 @@ namespace Tamagotchi.Models
       foreach (Tamagotchi tamagotchi in _instances)
       {
         tamagotchi.Food -= 1;
-        tamagotchi.Hapiness -= 1;
+        tamagotchi.Happiness -= 1;
         tamagotchi.Sleep -= 1;
-        SetLife();
+        tamagotchi.SetLife();
       }
     }
   }

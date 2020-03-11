@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+@using TamagotchiGame.Models
+  <h1>@Model.Name</h1>
+  <h2>Food: @Model.Food</h2>
+  <h2>Sleep: @Model.Sleep</h2>
+  <h2>Happiness: @Model.Happiness</h2>
+  <form action="/tamagotchis/@Model.Id" method="post">
+    <button type="submit" name="button" value="@Model.Id">Feed</button>
+  </form>
+
+  <a href="/tamagotchis/new">Add Another Tamagotchi</a>
+
