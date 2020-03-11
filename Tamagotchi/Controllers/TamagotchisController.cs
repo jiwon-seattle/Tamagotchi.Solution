@@ -17,7 +17,7 @@ namespace TamagotchiGame.Controllers
     {
       Tamagotchi tama = new Tamagotchi(name);
       List<Tamagotchi> allTamagotchis = Tamagotchi.GetAll();
-      return View("index", allTamagotchis);
+      return View("Index", allTamagotchis);
     }
 
     [HttpGet("/tamagotchis/{id}")]
@@ -34,5 +34,14 @@ namespace TamagotchiGame.Controllers
       tama.Food++;
       return View("Show", tama);
     }
+
+    [HttpPost("/tamagotchis/time")]
+    public ActionResult Decrease()
+    {
+      Tamagotchi.PassTime();
+      List<Tamagotchi> allTamagotchis = Tamagotchi.GetAll();
+      return View("Index", allTamagotchis);
+    }
+
   }
 }
