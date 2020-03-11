@@ -33,11 +33,27 @@ namespace TamagotchiGame.Controllers
       return View(tama);
     }
 
-    [HttpPost("/tamagotchis/{id}")]
+    [HttpPost("/tamagotchis/{id}/feed")]
     public ActionResult Feed(int id)
     {
       Tamagotchi tama = Tamagotchi.Find(id);
       tama.Food++;
+      return View("Show", tama);
+    }
+
+    [HttpPost("/tamagotchis/{id}/play")]
+    public ActionResult Play(int id)
+    {
+      Tamagotchi tama = Tamagotchi.Find(id);
+      tama.Happiness++;
+      return View("Show", tama);
+    }
+
+    [HttpPost("/tamagotchis/{id}/sleep")]
+    public ActionResult Sleep(int id)
+    {
+      Tamagotchi tama = Tamagotchi.Find(id);
+      tama.Sleep++;
       return View("Show", tama);
     }
 
